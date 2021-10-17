@@ -1,4 +1,4 @@
-name: hapi-combined
+name: hapi-combined4
 base: core18
 version: '1.0.11'
 summary: Hapi Server Linux-x64
@@ -7,19 +7,15 @@ description: |
 grade: devel
 confinement: devmode
 
-architectures:
-  - build-on: amd64
-  - build-on: i386
-
 apps:
-  # curl:
-  #   command: curl
+  curl:
+    command: curl
   # bash:
   #   command: bash
   hapis1:
-     command: /snap/hapi-combined/current/bin/node /snap/hapi-combined/current/test/server-test.js
+     command: /snap/hapi-combined4/current/bin/node /snap/hapi-combined4/current/test/server-test.js
   hapis-server:
-    command: /snap/hapi-combined/current/hapi-server --logdir="/home/parallels/hapi_logs" --metadata_dir="/home/parallels/hapi_metadata" 
+    command: /snap/hapi-combined4/current/hapi-server --logdir="/home/parallels/hapi_logs" --metadata_dir="/home/parallels/hapi_metadata" 
 
   
 parts:
@@ -29,9 +25,9 @@ parts:
   hapis-server:
     source: https://github.com/drunkenlord/sna-test-1/releases/download/v1.0/hapi-server-v1.0.10.tar.gz
     plugin: dump
-  # curl:
-  #   source: http://curl.haxx.se/download/curl-7.45.0.tar.bz2
-  #   plugin: autotools
+  curl:
+    source: http://curl.haxx.se/download/curl-7.45.0.tar.bz2
+    plugin: autotools
   # gnu-bash:
   #   source: http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
   #   plugin: autotools
