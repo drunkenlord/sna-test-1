@@ -1,4 +1,4 @@
-name: hapi-combined10
+name: hapi-combined12
 base: core18
 version: '1.0.11'
 summary: Hapi Server Linux-x64
@@ -15,9 +15,9 @@ apps:
   # bash:
   #   command: bash
   hapis1:
-     command: /snap/hapi-combined10/current/hapi-server-v1.0.10/bin/node /snap/hapi-combined10/current/hapi-server-v1.0.10/test/server-test.js
+     command: /snap/hapi-combined12/current/hapi-server-v1.0.10/bin/node /snap/hapi-combined12/current/hapi-server-v1.0.10/test/server-test.js
   hapis-server:
-    command: /snap/hapi-combined10/current/hapi-server-v1.0.10/hapi-server --logdir="/home/parallels/hapi_logs" --metadata_dir="/home/parallels/hapi_metadata" 
+     command: /snap/hapi-combined12/current/hapi-server-v1.0.10/hapi-server --logdir="/home/parallels/hapi_logs" --metadata_dir="/home/parallels/hapi_metadata" 
 
   
 parts:
